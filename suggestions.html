@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Suggestions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="suggestions-page">
+    <nav class="title-bar">
+        <div class="title-content">
+            <h1>HealthyEats</h1>
+        </div>
+        <div class="navbar">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="meals.html">Meals</a></li>
+                <li><a href="suggestions.html">Restaurant Suggestions</a></li>
+                <li><a href="chatbox.html">ChatBox/Questions</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="province-container">
+        <p><b>Select a province or territory below: (Data is currently available for BC, Alberta, and Saskatchewan) </b></p>
+        <form id="province-form" action="/submit-province" method="post">
+            <ul class="province-list">
+                <li><input type="radio" id="alberta" name="province" value="Alberta"><label for="alberta">Alberta</label></li>
+                <li><input type="radio" id="british-columbia" name="province" value="British Columbia"><label for="british-columbia">British Columbia</label></li>
+                <li><input type="radio" id="manitoba" name="province" value="Manitoba"><label for="manitoba">Manitoba</label></li>
+                <li><input type="radio" id="new-brunswick" name="province" value="New Brunswick"><label for="new-brunswick">New Brunswick</label></li>
+                <li><input type="radio" id="newfoundland-labrador" name="province" value="Newfoundland and Labrador"><label for="newfoundland-labrador">Newfoundland and Labrador</label></li>
+                <li><input type="radio" id="northwest-territories" name="province" value="Northwest Territories"><label for="northwest-territories">Northwest Territories</label></li>
+                <li><input type="radio" id="nova-scotia" name="province" value="Nova Scotia"><label for="nova-scotia">Nova Scotia</label></li>
+                <li><input type="radio" id="nunavut" name="province" value="Nunavut"><label for="nunavut">Nunavut</label></li>
+                <li><input type="radio" id="ontario" name="province" value="Ontario"><label for="ontario">Ontario</label></li>
+                <li><input type="radio" id="prince-edward-island" name="province" value="Prince Edward Island"><label for="prince-edward-island">Prince Edward Island</label></li>
+                <li><input type="radio" id="quebec" name="province" value="Quebec"><label for="quebec">Quebec</label></li>
+                <li><input type="radio" id="saskatchewan" name="province" value="Saskatchewan"><label for="saskatchewan">Saskatchewan</label></li>
+                <li><input type="radio" id="yukon" name="province" value="Yukon"><label for="yukon">Yukon</label></li>
+            </ul>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <script>
+            document.getElementById('province-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                
+                const selectedProvince = document.querySelector('input[name="province"]:checked');
+                
+                if (selectedProvince) {
+                    const provinceValue = selectedProvince.value;
+                    window.location.href = `displayrestaurants.html?province=${encodeURIComponent(provinceValue)}`;
+                } else {
+                    alert('Please select a province.');
+                }
+            });
+        </script>
+    </section>
+</body>
+</html>

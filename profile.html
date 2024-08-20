@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="title-bar">
+        <div class="title-content">
+            <h1>HealthyEats</h1>
+        </div>
+        <div class="navbar">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="meals.html">Meals</a></li>
+                <li><a href="suggestions.html">Restaurant Suggestions</a></li>
+                <li><a href="chatbox.html">ChatBox/Questions</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <section id="profile">
+        <h2>Personal Profile Information</h2>
+        <form action="/submit-profile" method="post" enctype="multipart/form-data">
+            <p>
+                <label for="profile-picture">Profile Picture:</label>
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+            </p>
+            <p>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name">
+            </p>
+            <p>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name">
+            </p>
+            <p>
+                <label for="age">Age:</label>
+                <select id="age" name="age">
+                    <option value="">Select your age</option>
+                </select>
+            </p>
+            <p>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="">Select your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p>
+            <p>
+                <label for="health-goal">Personal Health Goal:</label>
+                <textarea id="health-goal" name="health-goal" rows="6" cols="50" placeholder="My health goal is to..."></textarea>
+            </p>
+            <p>
+                <button type="submit" class="grey-button">Submit</button>
+            </p>
+        </form>
+    </section>
+
+    <script>
+        window.onload = function() {
+            var ageSelect = document.getElementById('age');
+            for (var i = 1; i <= 100; i++) {
+                var option = document.createElement('option');
+                option.value = i;
+                option.text = i;
+                ageSelect.appendChild(option);
+            }
+        };
+    </script>
+</body>
+</html>

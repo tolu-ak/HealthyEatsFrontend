@@ -25,11 +25,8 @@
 
     <section id="profile">
         <h2>Personal Profile Information</h2>
-        <form action="/submit-profile" method="post" enctype="multipart/form-data">
-            <p>
-                <label for="profile-picture">Profile Picture:</label>
-                <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
-            </p>
+        <form id="profile-form">
+            
             <p>
                 <label for="first-name">First Name:</label>
                 <input type="text" id="first-name" name="first-name">
@@ -64,6 +61,7 @@
     </section>
 
     <script>
+        
         window.onload = function() {
             var ageSelect = document.getElementById('age');
             for (var i = 1; i <= 100; i++) {
@@ -74,5 +72,7 @@
             }
         };
     </script>
+     <script src="website.js">
+        </script>
 </body>
 </html>

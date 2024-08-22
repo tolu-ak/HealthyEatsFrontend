@@ -4,20 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (loginForm) {
     loginForm.addEventListener("submit", function (event) {
       event.preventDefault(); // Prevents the default action of submitting the form and reloading the page
-      const usernameInput = document.getElementById("username");
+      const emailInput = document.getElementById("email");
       const passwordInput = document.getElementById("password");
 
       // Check if elements are found
-      if (usernameInput && passwordInput) {
-        const username = usernameInput.value; // Selects HTML element with ID username and retrieves the value
+      if (emailInput && passwordInput) {
+        const email = emailInput.value; // Selects HTML element with ID username and retrieves the value
         const password = passwordInput.value; // Retrieves value of password from HTML
-
+console.log(email,password);
         fetch("http://127.0.0.1:3000/auth/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ username, password }), // Converts the user and pass to a string so the API can process the information
+          body: JSON.stringify({ email, password }), // Converts the user and pass to a string so the API can process the information
         })
           .then((response) => response.json()) // Converts the response from JSON (JavaScript Object Notation) format to JavaScript
           .then((data) => {
@@ -258,7 +258,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const ageInput = document.getElementById("age");
       const genderInput = document.getElementById("gender");
       const healthGoalInput = document.getElementById("health-goal");
-
       if (
         firstNameInput &&
         lastNameInput &&
@@ -266,24 +265,26 @@ document.addEventListener("DOMContentLoaded", function () {
         genderInput &&
         healthGoalInput
       ) {
-        const firstName = firstNameInput.value;
-        const lastName = lastNameInput.value;
+        const firstname = firstNameInput.value;
+        const lastname = lastNameInput.value;
         const age = ageInput.value;
         const gender = genderInput.value;
         const healthGoal = healthGoalInput.value;
-
+       const body = JSON.stringify({
+        firstname,
+        lastname,
+        age,
+        gender,
+        healthGoal,
+        email: 'toluwaniakinwande@gmail.com'
+      })
+      console.log(body)
         fetch("http://127.0.0.1:3000/profile", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            firstName,
-            lastName,
-            age,
-            gender,
-            healthGoal,
-          }),
+          body
         })
           .then((response) => response.json())
           .then((data) => {

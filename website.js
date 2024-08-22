@@ -1,3 +1,4 @@
+const webURL = 'https://healthyeats-4iai.onrender.com';
 document.addEventListener("DOMContentLoaded", function () {
   // Event listener for login form
   const loginForm = document.getElementById("login-form");
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = emailInput.value; // Selects HTML element with ID username and retrieves the value
         const password = passwordInput.value; // Retrieves value of password from HTML
 console.log(email,password);
-        fetch("http://127.0.0.1:3000/auth/login", {
+        fetch(`${webURL}/auth/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -46,7 +47,7 @@ console.log(email,password);
       const mealInput = document.getElementById("Input");
       if (mealInput) {
         const meal = mealInput.value;
-        fetch("http://127.0.0.1:3000/meal/mealsearch", {
+        fetch(`${webURL}/meal/mealsearch`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -163,7 +164,7 @@ console.log(email,password);
           meal,
           province,
         };
-        fetch(`http://127.0.0.1:3000/rest/restaurantsearch`, {
+        fetch(`${webURL}/rest/restaurantsearch`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -224,7 +225,7 @@ console.log(email,password);
       if (questionInput) {
         const question = questionInput.value;
 
-        fetch("http://127.0.0.1:3000/questions", {
+        fetch(`${webURL}:3000/questions`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -279,7 +280,7 @@ console.log(email,password);
         email: 'toluwaniakinwande@gmail.com'
       })
       console.log(body)
-        fetch("http://127.0.0.1:3000/profile", {
+        fetch(`${webURL}/profile`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

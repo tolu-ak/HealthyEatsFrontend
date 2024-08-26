@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meals</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="meals-page">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="meals-page">
     <nav class="title-bar">
-        <div class="title-content">
-            <h1>HealthyEats</h1>
-        </div>
-        <div class="navbar">
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="meals.html">Meals</a></li>
-                <li><a href="suggestions.html">Restaurant Suggestions</a></li>
-                <li><a href="chatbox.html">ChatBox/Questions</a></li>
-            </ul>
-        </div>
+      <a href="/" class="title-content">
+        <h1>HealthyEats</h1>
+      </a>
+      <div class="navbar">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="meals.html">Meals</a></li>
+          <li><a href="suggestions.html">Restaurant Suggestions</a></li>
+          <li><a href="chatbox.html">ChatBox/Questions</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
     </nav>
     <div class="search-container">
-        <form id="meal-form">
-            <div id="meal-results"></div>
-            <input type="text" id="Input" placeholder="Start browsing here...">
-            <button id="searchButton" type="submit">Search</button>
-        </form>
+      <form id="meal-form">
+        <div id="meal-results"></div>
+        <input type="text" id="Input" placeholder="Start browsing here..." />
+        <button id="searchButton" type="submit">Search</button>
+      </form>
     </div>
 
     <!-- Search Results Section -->
     <div class="search-results">
-        <!-- Searched Meal -->
-    
-            <!-- <div class="meal-details">
+      <!-- Searched Meal -->
+
+      <!-- <div class="meal-details">
                 <h3 id="meal-name">Meal Name:</h3>
                 <div id="meal-breakdown">
                     <h4>Nutritional Breakdown:</h4>
@@ -49,8 +49,8 @@
                 </div>
             </div> -->
 
-        <!-- Alternative Meal -->
-            <!-- <div class="meal-details">
+      <!-- Alternative Meal -->
+      <!-- <div class="meal-details">
                 <h3 id="alternative-meal-name">Healthier alternative:</h3>
                 <div id="alternative-meal-breakdown">
                     <h4>Nutritional Breakdown:</h4>
@@ -67,6 +67,32 @@
             </div> -->
     </div>
 
+    <div class="loader">
+      <svg
+        class="spinner"
+        version="1.1"
+        id="L9"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 100 100"
+        enable-background="new 0 0 0 0"
+        xml:space="preserve">
+        <path
+          fill="#fff"
+          d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            dur="1s"
+            from="0 50 50"
+            to="360 50 50"
+            repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
     <script src="website.js"></script>
-</body>
+  </body>
 </html>

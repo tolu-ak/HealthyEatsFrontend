@@ -1,804 +1,754 @@
-
 /* General  */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('image/bgimage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('image/bgimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-
+a {
+  text-decoration: none;
+}
 /* Title Bar Styles */
 .title-bar {
-    background-color: #006400; /* Dark green */
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center; /* Align title and menu vertically */
-    justify-content: space-between; /* Space out title and menu */
+  background-color: #006400; /* Dark green */
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Align title and menu vertically */
+  justify-content: space-between; /* Space out title and menu */
 }
 
 .title-content {
-    margin-left: 20px; /*HealthyEats now more on the right side*/
-}
-
-.title-content h1 {
-    color: white;
-    font-weight: bold;
-    margin: 0;
+  margin-left: 20px; /*HealthyEats now more on the right side*/
 }
 
 .navbar {
-    display: flex;
-    flex: 1;
-    justify-content: center; /* Center menu items */
+  display: flex;
+  flex: 1;
+  justify-content: center; /* Center menu items */
 }
 
 .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .menu li {
-    position: relative;
+  position: relative;
 }
 
 .menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.menu li a:hover {
-    background-color: #004d00; /* Slightly darker green */
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 /* Top Content Styles */
 .top-content {
-    background-image: url('images/bgimage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 50vh;
-    padding: 20px;
-    color: white;
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the text horizontally */
-    text-align: center;
+  background-image: url('images/bgimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 50vh;
+  padding: 40px 20px;
+  color: white;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the text horizontally */
+  text-align: center;
+  flex-direction: column;
+}
+
+.top-content h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: #60e360;
+}
+
+@media (min-width: 800px) {
+  .top-content h2 {
+    font-size: 4rem;
+  }
 }
 
 .top-content p {
-    font-weight: bold;
-    margin-top: 20px; 
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 400px;
 }
 
 /* Bottom Content Styles */
 .bottom-content {
-    background-color: #fff;
-    padding: 20px;
-    min-height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
+  background-color: #fff;
+  padding: 20px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
 }
 
 /* About Box Styles */
 .about-box {
-    border: none;
-    padding: 20px;
-    max-width: 600px;
-    text-align: center; /* Center text inside the box */
-    margin: 0 auto 30px; /* Add space below the box */
-    border-radius: 15px; /* Round edges */
+  border: none;
+  padding: 80px 20px 40px;
+  max-width: 600px;
+  text-align: center; /* Center text inside the box */
+  margin: 0 auto 30px; /* Add space below the box */
+  border-radius: 15px; /* Round edges */
 }
 .about-box p {
-    width: 100%; /* Adjust this percentage to control the width of the paragraph */
-    margin: 0 auto; /* Center-align the paragraph */
-    text-align: justify; /* Justify text for a more extended appearance */
-    line-height: 1.6; /* Increase line height for better readability */
-
+  width: 100%; /* Adjust this percentage to control the width of the paragraph */
+  margin: 0 auto; /* Center-align the paragraph */
+  text-align: justify; /* Justify text for a more extended appearance */
+  line-height: 1.6; /* Increase line height for better readability */
 }
-
-
-
-
 
 /* General  */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('image/bgimage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 
 /* Title Bar Styles */
-.title-bar {
-    background-color: #006400; /* Dark green */
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center; /* Align title and menu vertically */
-    justify-content: space-between; /* Space out title and menu */
-}
-
-.title-content {
-    margin-left: 20px; /*HealthyEats now more on the right side*/
-}
 
 .title-content h1 {
-    color: white;
-    font-weight: bold;
-    margin: 0;
-}
-
-.navbar {
-    display: flex;
-    flex: 1;
-    justify-content: center; /* Center menu items */
+  color: white;
+  font-weight: bold;
+  margin: 0;
 }
 
 .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .menu li {
-    position: relative;
+  position: relative;
 }
 
 .menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .menu li a:hover {
-    background-color: #004d00; /* Slightly darker green */
+  color: #60e360; /* Slightly darker green */
 }
-
-
-
 
 /* Login Page Styles */
 .login-page {
-    background-image: url('images/bgimage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-image: url('images/bgimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .login-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px; /* Rounded edges */
-    border: 2px solid #006400; /* Dark green border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px; /* Rounded edges */
+  border: 2px solid #006400; /* Dark green border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
 }
 
 .login-box h2 {
-    color: #000;
-    font-weight: bold;
-    margin-bottom: 20px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .login-box input {
-    width: calc(100% - 20px); /* Adjust width to fit inside the box */
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px; /* Rounded edges */
+  width: calc(100% - 20px); /* Adjust width to fit inside the box */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Rounded edges */
 }
 
 .login-box button {
-    width: 100%;
-    padding: 10px;
-    background-color: #006400; /* Dark green */
-    color: white;
-    border: none;
-    border-radius: 5px; /* Rounded edges */
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 16px; /* Adjust font size to match other buttons */
+  width: 100%;
+  padding: 10px;
+  background-color: #006400; /* Dark green */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded edges */
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px; /* Adjust font size to match other buttons */
 }
 
 .login-box button:hover {
-    background-color: #004d00; /* Slightly darker green */
+  background-color: #004d00; /* Slightly darker green */
 }
 /* Meals Page Styles */
 .meals-page {
-    background-image: url('images/bgimage.jpg'); /* Same background image as login page */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Full viewport height */
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-image: url('images/bgimage.jpg'); /* Same background image as login page */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search-container {
-    background-color: white;
-    border: 2px solid #006400; /* Dark green border */
-    border-radius: 24px; /* Rounded edges */
-    display: flex;
-    align-items: center;
-    width: 100%; /* Full width */
-    max-width: 600px; /* Limit max size */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for a better look */
-    margin-top: 120px; /* Moves the search bar down by approximately two lines */
-    margin-bottom: 20px; /* Space below the search bar */
-}
-
-.search-container input[type="text"] {
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 24px; /* Match the rounded edges of the container */
-    flex: 1; /* Allows the input to take up remaining space */
-    outline: none; /* Remove the default focus outline */
-    box-shadow: none;
-}
-
-.search-container button {
-    background-color: #006400; /* Dark green */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 24px; /* Match the rounded edges of the container */
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 0px; /* Add space between input and button */
-}
-
-.search-container button:hover {
-    background-color: #004d00; /* Slightly darker green */
+  background-color: white;
+  border: 2px solid #006400; /* Dark green border */
+  border-radius: 24px; /* Rounded edges */
+  width: 100%; /* Full width */
+  max-width: 600px; /* Limit max size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for a better look */
+  margin-top: 120px; /* Moves the search bar down by approximately two lines */
+  margin-bottom: 20px; /* Space below the search bar */
 }
 
 /* Add some space below the search container if needed */
 .meals-page .content {
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
 }
-
 
 /* Profile Page Styles */
 .profile-page {
-    background-image: url('images/bgimage.jpg'); /* Use the same background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Full viewport height */
-    padding: 20px;
-    box-sizing: border-box;
+  background-image: url('images/bgimage.jpg'); /* Use the same background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #profile {
-    background-image: url('image/bgimage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 80px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url('image/bgimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 80px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #profile h4 {
-    margin: 10px 0;
-    font-weight: bold;
+  margin: 10px 0;
+  font-weight: bold;
 }
 
-#profile input[type="text"],
+#profile input[type='text'],
 #profile select,
 #profile textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 #profile button {
-    background-color: #006400; /* Dark green */
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #006400; /* Dark green */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 #profile button:hover {
-    background-color: #004d00; /* Slightly darker green */
+  background-color: #004d00; /* Slightly darker green */
 }
 
-/* Button Styles */ch
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+/* Button Styles */
+ch button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Grey Button */
 .grey-button {
-    background-color: #d3d3d3; /* Light grey */
-    color: #000;
+  background-color: #d3d3d3; /* Light grey */
+  color: #000;
 }
 
 .grey-button:hover {
-    background-color: #b0b0b0; /* Slightly darker grey */
+  background-color: #b0b0b0; /* Slightly darker grey */
 }
 
 /*consistent background style */
 body.suggestions-page {
-    background: url('images/bgimage.jpg') no-repeat center center fixed; /* Replace with your background image path */
-    background-size: cover; /* Ensures the background covers the entire page */
-    color: #333; /* Adjust text color if needed */
+  background: url('images/bgimage.jpg') no-repeat center center fixed; /* Replace with your background image path */
+  background-size: cover; /* Ensures the background covers the entire page */
+  color: #333; /* Adjust text color if needed */
 }
 
 /* submit button on suggestions page*/
 .submit-button {
-    background-color: #07641e; /* Example green color, adjust as needed */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-
+  background-color: #07641e; /* Example green color, adjust as needed */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .province-container {
-    color: white; /* Sets text color to white */
-    font-weight: bold; /* Makes the text bold */
-    margin-top: 250px; 
-    margin-left: 500px;
-  
+  color: white; /* Sets text color to white */
+  font-weight: bold; /* Makes the text bold */
+  margin-top: 250px;
+  margin-left: 500px;
 }
 
 .province-list {
-    color: white; /* Sets the text color to white */
-    font-weight: bold; /* Makes the text bold */
-    list-style-type: none; /* Removes bullet points from the list, if needed */
-    padding: 0; /* Removes padding, if necessary */
-    margin: 0; /* Removes margin, if necessary */
+  color: white; /* Sets the text color to white */
+  font-weight: bold; /* Makes the text bold */
+  list-style-type: none; /* Removes bullet points from the list, if needed */
+  padding: 0; /* Removes padding, if necessary */
+  margin: 0; /* Removes margin, if necessary */
 }
 
 .province-list li {
-    margin-bottom: 10px; /* Adds space between list items, if needed */
+  margin-bottom: 10px; /* Adds space between list items, if needed */
 }
 
 /* Chatbox Page Styles */
 .login-page .comments-text {
-    color: white; /* Sets text color to white */
-    font-weight: bold; /* Makes the text bold */
+  color: white; /* Sets text color to white */
+  font-weight: bold; /* Makes the text bold */
 }
 
 .search-results {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
 .meal-details {
-    border: 2px solid #006400; /* Dark green border */
-    border-radius: 15px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: center;
+  border: 2px solid #006400; /* Dark green border */
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .meal-details img {
-    width: 100%; /* Adjust width as needed */
-    max-width: 300px; /* Limit max width */
-    border-radius: 15px;
+  width: 100%; /* Adjust width as needed */
+  max-width: 300px; /* Limit max width */
+  border-radius: 15px;
 }
 
-.meal-details h3, .meal-details h4 {
-    color: #006400; /* Dark green color for headings */
+.meal-details h3,
+.meal-details h4 {
+  color: #006400; /* Dark green color for headings */
 }
 
 .meal-details ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .meal-details ul li {
-    margin-bottom: 10px;
-    font-size: 16px; /* Adjust font size if needed */
+  margin-bottom: 10px;
+  font-size: 16px; /* Adjust font size if needed */
 }
 
 .meal-details span {
-    font-weight: bold; /* Make the values bold */
+  font-weight: bold; /* Make the values bold */
 }
 /* Login Page Styles */
 .login-page {
-    background-image: url('images/bgimage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-image: url('images/bgimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .login-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px; /* Rounded edges */
-    border: 2px solid #006400; /* Dark green border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px; /* Rounded edges */
+  border: 2px solid #006400; /* Dark green border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
 }
 
 .login-box h2 {
-    color: #000;
-    font-weight: bold;
-    margin-bottom: 20px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.login-box input[type="text"], .login-box input[type="password"] {
-    width: calc(100% - 20px); /* Adjust width to fit inside the box */
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px; /* Rounded edges */
+.login-box input[type='text'],
+.login-box input[type='password'] {
+  width: calc(100% - 20px); /* Adjust width to fit inside the box */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Rounded edges */
 }
 
 .login-box button {
-    width: 100%;
-    padding: 10px;
-    background-color: #006400; /* Dark green */
-    color: white;
-    border: none;
-    border-radius: 5px; /* Rounded edges */
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 16px; /* Adjust font size to match other buttons */
+  width: 100%;
+  padding: 10px;
+  background-color: #006400; /* Dark green */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded edges */
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px; /* Adjust font size to match other buttons */
 }
 
 .login-box button:hover {
-    background-color: #004d00; /* Slightly darker green */
+  background-color: #004d00; /* Slightly darker green */
 }
 /* Display Restaurant Suggestions Page*/
 .meals-page {
-    background-image: url('images/bgimage.jpg'); /* Same background image as login page */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Full viewport height */
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-image: url('images/bgimage.jpg'); /* Same background image as login page */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-container form {
+  display: flex;
+}
+.search-container input[type='text'] {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 24px; /* Match the rounded edges of the container */
+  flex: 1; /* Allows the input to take up remaining space */
+  outline: none; /* Remove the default focus outline */
+  margin-right: 10px; /* Add space between input and button */
+  box-shadow: none;
 }
 
-
-.search-container input[type="text"] {
-    flex-grow: 1;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 24px; /* Match the rounded edges of the container */
-    flex: 1; /* Allows the input to take up remaining space */
-    outline: none; /* Remove the default focus outline */
-    margin-right: 10px; /* Add space between input and button */
-    box-shadow: none;
-
-}
-
-.search-container input[type="text"]::placeholder {
-    color: #808080; /* Ensure placeholder text is visible */
+.search-container input[type='text']::placeholder {
+  color: #808080; /* Ensure placeholder text is visible */
 }
 
 .search-container button {
-    background-color: #006400; /* Dark green */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 24px; /* Match the rounded edges of the container */
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 277px; /* Add space between input and button */
+  background-color: #006400; /* Dark green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 24px; /* Match the rounded edges of the container */
+  cursor: pointer;
+  font-size: 16px;
 }
 
-
 .search-container button:hover {
-    background-color: #004d00; /* Slightly darker green */
+  background-color: #004d00; /* Slightly darker green */
 }
 
 /* Add some space below the search container if needed */
 .meals-page .content {
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
 }
-
 
 /* Profile Page Styles */
 .profile-page {
-    background-image: url('images/bgimage.jpg'); /* Use the same background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; /* Full viewport height */
-    padding: 20px;
-    box-sizing: border-box;
+  background-image: url('images/bgimage.jpg'); /* Use the same background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #profile {
-    background-image: url('image/bgimage.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 80px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url('image/bgimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 80px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #profile h4 {
-    margin: 10px 0;
-    font-weight: bold;
+  margin: 10px 0;
+  font-weight: bold;
 }
 
-#profile input[type="text"],
+#profile input[type='text'],
 #profile select,
 #profile textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 #profile button {
-    background-color: #006400; /* Dark green */
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #006400; /* Dark green */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 #profile button:hover {
-    background-color: #004d00; /* Slightly darker green */
+  background-color: #004d00; /* Slightly darker green */
 }
 
 /* Button Styles */
 button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Grey Button */
 .grey-button {
-    background-color: #d3d3d3; /* Light grey */
-    color: #000;
+  background-color: #d3d3d3; /* Light grey */
+  color: #000;
 }
 
 .grey-button:hover {
-    background-color: #b0b0b0; /* Slightly darker grey */
+  background-color: #b0b0b0; /* Slightly darker grey */
 }
 
 /*consistent background style */
 body.suggestions-page {
-    background: url('images/bgimage.jpg') no-repeat center center fixed; /* Replace with your background image path */
-    background-size: cover; /* Ensures the background covers the entire page */
-    color: #333; /* Adjust text color if needed */
+  background: url('images/bgimage.jpg') no-repeat center center fixed; /* Replace with your background image path */
+  background-size: cover; /* Ensures the background covers the entire page */
+  color: #333; /* Adjust text color if needed */
 }
 
 /* submit button on suggestions page*/
 .submit-button {
-    background-color: #07641e; /* Example green color, adjust as needed */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-
+  background-color: #07641e; /* Example green color, adjust as needed */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .province-container {
-    color: white; /* Sets text color to white */
-    font-weight: bold; /* Makes the text bold */
-    margin-top: 250px; 
-    margin-left: 500px;
-  
+  color: white; /* Sets text color to white */
+  font-weight: bold; /* Makes the text bold */
+  margin-top: 250px;
+  margin-left: 500px;
 }
 
 .province-list {
-    color: white; /* Sets the text color to white */
-    font-weight: bold; /* Makes the text bold */
-    list-style-type: none; /* Removes bullet points from the list, if needed */
-    padding: 0; /* Removes padding, if necessary */
-    margin: 0; /* Removes margin, if necessary */
+  color: white; /* Sets the text color to white */
+  font-weight: bold; /* Makes the text bold */
+  list-style-type: none; /* Removes bullet points from the list, if needed */
+  padding: 0; /* Removes padding, if necessary */
+  margin: 0; /* Removes margin, if necessary */
 }
 
 .province-list li {
-    margin-bottom: 10px; /* Adds space between list items, if needed */
+  margin-bottom: 10px; /* Adds space between list items, if needed */
 }
 
 /* Chatbox Page Styles */
 .login-page .comments-text {
-    color: white; /* Sets text color to white */
-    font-weight: bold; /* Makes the text bold */
+  color: white; /* Sets text color to white */
+  font-weight: bold; /* Makes the text bold */
 }
 
 .search-results {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
 /* Meal Cards Container */
 .meal-cards-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows the cards to wrap to the next line if there are too many */
-    gap: 20px; /* Adds space between the cards */
-    justify-content: center; /* Centers the cards horizontally */
+  display: flex;
+  flex-wrap: wrap; /* Allows the cards to wrap to the next line if there are too many */
+  gap: 20px; /* Adds space between the cards */
+  justify-content: center; /* Centers the cards horizontally */
 }
 
 /* Meal Card Styles */
 .meal-card {
-    border: 2px solid #006400; /* Dark green border */
-    border-radius: 15px;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 250px; /* Limit max width of each card */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  border: 2px solid #006400; /* Dark green border */
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px; /* Limit max width of each card */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .meal-card img {
-    width: 100%; /* Ensure image takes full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 150px; /* Limit height of the image */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
-    border: 2px solid green; /* Green border */
-    border-radius: 10px; /* Rounded edges */
+  width: 100%; /* Ensure image takes full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 150px; /* Limit height of the image */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  border: 2px solid green; /* Green border */
+  border-radius: 10px; /* Rounded edges */
 }
 
 .meal-card .caption {
-    margin-top: 10px; /* Space between image and caption */
+  margin-top: 10px; /* Space between image and caption */
 }
 
 /* Ensure container for food images is styled appropriately */
 .image-container {
-    width: 100%; /* Full width of the site */
-    display: flex; /* Use flexbox to align images horizontally */
-    justify-content: space-around; /* Space images evenly */
-    flex-wrap: wrap; /* Allow images to wrap onto multiple lines if necessary */
-    gap: 20px; /* Space between images */
-    margin-top: 20px; /* Add some space at the top */
+  width: 100%; /* Full width of the site */
+  display: flex; /* Use flexbox to align images horizontally */
+  justify-content: space-around; /* Space images evenly */
+  flex-wrap: wrap; /* Allow images to wrap onto multiple lines if necessary */
+  gap: 20px; /* Space between images */
+  margin-top: 20px; /* Add some space at the top */
 }
 
 /* Style each food item as a card */
 .image-container div {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items horizontally */
-    width: 250px; /* Fixed width for all images */
-    border: 2px solid #006400; /* Dark green border */
-    border-radius: 15px; /* Rounded corners */
-    padding: 0; /* No extra padding inside the card */
-    background-color: #fff; /* White background for the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better look */
-    text-align: center; /* Center text inside the card */
-    overflow: hidden; /* Ensure the image does not overflow the card */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+  width: 250px; /* Fixed width for all images */
+  border: 2px solid #006400; /* Dark green border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 0; /* No extra padding inside the card */
+  background-color: #fff; /* White background for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better look */
+  text-align: center; /* Center text inside the card */
+  overflow: hidden; /* Ensure the image does not overflow the card */
 }
 
 .image-container img {
-    width: 100%; /* Make the image fill the width of its container */
-    height: 100%; /* Make the image fill the height of its container */
-    object-fit: cover; /* Ensure the image covers the container, cropping as needed */
-    border-radius: 15px; /* Rounded corners for images */
+  width: 100%; /* Make the image fill the width of its container */
+  height: 100%; /* Make the image fill the height of its container */
+  object-fit: cover; /* Ensure the image covers the container, cropping as needed */
+  border-radius: 15px; /* Rounded corners for images */
 }
 
 .image-caption {
-    text-align: center; /* Center the caption */
-    font-weight: bold;
-    margin-top: 10px; /* Space between image and caption */
-    font-size: 14px; /* Adjust font size if needed */
-    color: #333; /* Adjust text color if needed */
-
-    
+  text-align: center; /* Center the caption */
+  font-weight: bold;
+  margin-top: 10px; /* Space between image and caption */
+  font-size: 14px; /* Adjust font size if needed */
+  color: #333; /* Adjust text color if needed */
 }
 /* Restaurant Card Styles */
 .restaurant-card {
-    border: 2px solid #006400; /* Dark green border */
-    border-radius: 15px; /* Curved edges */
-    padding: 20px;
-    background-color: #fff; /* White background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better look */
-    margin-bottom: 20px;
-    text-align: center;
-    max-width: 400px; /* Limit the width of each card */
-    margin: 10px auto; /* Center card horizontally */
+  border: 2px solid #006400; /* Dark green border */
+  border-radius: 15px; /* Curved edges */
+  padding: 20px;
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for better look */
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 400px; /* Limit the width of each card */
+  margin: 10px auto; /* Center card horizontally */
 }
 
 .restaurant-card h2 {
-    color: #006400; /* Dark green color for the name */
-    margin: 0;
+  color: #006400; /* Dark green color for the name */
+  margin: 0;
 }
 
-.restaurant-card p, .restaurant-card a {
-    color: #333; /* Dark color for text */
-    margin: 5px 0;
+.restaurant-card p,
+.restaurant-card a {
+  color: #333; /* Dark color for text */
+  margin: 5px 0;
 }
 
 .restaurant-card a {
-    text-decoration: none; /* Remove underline from links */
-    font-weight: bold;
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold;
 }
 
 .restaurant-card a:hover {
-    color: #006400; /* Dark green color on hover */
+  color: #006400; /* Dark green color on hover */
 }
 
 .restaurant-card .restaurant-image {
-    width: 100%; /* Make the image fill the width of its container */
-    max-height: 250px; /* Limit height of the image */
-    object-fit: cover; /* Ensure the image covers the container */
-    border-radius: 10px; /* Curved edges for the image */
-    margin-top: 10px; /* Space between details and image */
+  width: 100%; /* Make the image fill the width of its container */
+  max-height: 250px; /* Limit height of the image */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 10px; /* Curved edges for the image */
+  margin-top: 10px; /* Space between details and image */
+}
+
+.loader {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: #0000008c;
+  transition: all 300ms ease-in-out;
+}
+svg.spinner {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: inline-block;
+  stroke: white;
 }
